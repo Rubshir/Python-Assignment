@@ -1,0 +1,40 @@
+# 10 swap two numbers
+ #a) usng third variable
+a = int(input("Enter  number of A : "))
+b = int(input("Enter  number of B : "))
+
+c = a
+a = b
+b = c
+
+print("a =" , a)
+print("b =" , b)
+
+
+ #b) without using third variable
+a = int(input("Enter  number of A : "))
+b = int(input("Enter  number of B : "))
+
+a = a + b
+b = a - b
+a = a - b
+
+print("a =", a)
+print("b =", b)
+
+ #c) using function calll
+
+def swap(a,b):
+  c = a
+  a = b
+  b = c
+
+  return a,b
+
+a = int(input("Enter  number of A : "))
+b = int(input("Enter  number of B : "))
+
+a, b = swap(a,b)
+
+print("a =", a)
+print("b =", b)
